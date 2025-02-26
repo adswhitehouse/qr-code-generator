@@ -52,6 +52,106 @@ select {
 }
 /* CSS Reset */
 
+/* Body */
 body {
   font-family: "Roboto", serif;
+  background-color: #262a30;
+}
+
+/* Container */
+.qr-code-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Box */
+.qr-code-box {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* h1 */
+h1 {
+  font-size: 1.5rem;
+  color: #262a30;
+  margin-bottom: 1.5rem;
+}
+
+/* Input */
+input {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #4b58f2;
+  outline: none;
+  min-width: 5rem;
+}
+
+/* Button */
+button {
+  background-color: #4b58f2;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* QR Code */
+.qr-code {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  margin-inline: auto;
+  padding: 0.5rem;
+}
+
+.qr-code-show {
+  max-height: 200px;
+  border: 1px solid #4b58f2;
+}
+
+/* Error */
+.error {
+  animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Media Query */
+@media screen and (max-width: 25rem) {
+  .qr-code-box {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    justify-content: center;
+  }
+
+  h1 {
+    margin-inline: auto;
+    text-align: center;
+  }
 }
